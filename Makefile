@@ -13,17 +13,17 @@ OBJDIR = build
 
 SRC = $(wildcard $(SRCDIR)/*.c)
 INC = $(wildcard $(INCDIR)/*.h)
-OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJDIR)/%.o)
+OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 .PHONY: clean default
 
 default: app.html
 
 app.html: $(OBJ)
-	$(CC) -o $@ $^
+	$(CC) --emrun -o $@ $^
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c $(INC) | $(OBJDIR)
-	$(CC) -c -o $@ $<
+	$(CC) -c -I$(INCDIR) -o $@ $<
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
