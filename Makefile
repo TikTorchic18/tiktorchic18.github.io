@@ -9,11 +9,11 @@ endif
 
 SRCDIR = src
 INCDIR = include
-BUILDDIR = build
+OBJDIR = build
 
-SRC = $(wildcard $(SRC_DIR)/*.c)
-INC = $(wildcard $(INC_DIR)/*.h)
-OBJ = $(SRC:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
+SRC = $(wildcard $(SRCDIR)/*.c)
+INC = $(wildcard $(INCDIR)/*.h)
+OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJDIR)/%.o)
 
 .PHONY: clean default
 
@@ -22,5 +22,14 @@ default: app.html
 app.html: $(OBJ)
 	$(CC) -o $@ $^
 
-$(BUILDDIR)/%.o: $(SRCDIR)/%.c $(INC)
+$(OBJDIR)/%.o: $(SRCDIR)/%.c $(INC) | $(OBJDIR)
 	$(CC) -c -o $@ $<
+
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
+clean:
+	$(RM) -r $(OBJDIR)
+	$(RM) app.html
+	$(RM) app.js
+	$(RM) app.wasm
