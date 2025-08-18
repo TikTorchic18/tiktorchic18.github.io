@@ -1,0 +1,3 @@
+[submodule "include/clay"]
+	path = include/clay
+	url = https://github.com/nicbarker/clay.git
