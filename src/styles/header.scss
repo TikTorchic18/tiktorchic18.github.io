@@ -1,0 +1,28 @@
+header {
+    background: rgb(50, 75, 100);
+    font: 16px "Noto Serif Display", "Noto Serif", serif;
+    color: white;
+    div {
+        padding: 0px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            a {
+                padding: 4px;
+                text-decoration: none;
+                font: 16px "Noto Sans", sans-serif;
+                color: white;
+            }
+            a:hover {
+                background: rgb(75, 100, 125);
+            }
+        }
+    }
+}

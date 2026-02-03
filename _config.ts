@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
+import sass from "lume/plugins/sass.ts";
 import icons from "lume/plugins/icons.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 
@@ -11,6 +12,7 @@ const site = lume({
 site.add("styles");
 
 site.use(date());
+site.use(sass());
 site.use(icons());
 site.use(googleFonts({
     cssFile: "styles/fonts.css",
@@ -22,6 +24,6 @@ site.use(googleFonts({
         "Noto Serif": "https://fonts.google.com/share?selection.family=Noto+Serif:ital,wght@0,100..900;1,100..900",
         "Noto Serif Display": "https://fonts.google.com/share?selection.family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900"
     },
-}))
+}));
 
 export default site;
