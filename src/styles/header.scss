@@ -1,7 +1,8 @@
 header {
-    background: rgb(50, 75, 100);
-    font: 16px "Noto Serif Display", "Noto Serif", serif;
-    color: white;
+    background: #313244;
+    border-radius: 4px;
+    font: 16px "Inter", sans-serif;
+    color: #cdd6f4;
     div {
         padding: 0px 16px;
         display: flex;
@@ -15,13 +16,16 @@ header {
             align-items: flex-end;
             flex-wrap: wrap;
             a {
-                padding: 4px;
+                padding: 20px 8px 4px;
                 text-decoration: none;
                 font: 16px "Noto Sans", sans-serif;
-                color: white;
+                color: #cdd6f4;
             }
             a:hover {
-                background: rgb(75, 100, 125);
+                background: #45475a;
+            }
+            a:active {
+                color: #cba6f7
             }
         }
     }

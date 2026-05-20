@@ -2,7 +2,13 @@ import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
 import sass from "lume/plugins/sass.ts";
 import icons from "lume/plugins/icons.ts";
+import inline from "lume/plugins/inline.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
+import {
+  flavors,
+  flavorEntries,
+  version,
+} from "https://deno.land/x/catppuccin/mod.ts";
 
 const site = lume({
     src: "./src",
@@ -14,6 +20,7 @@ site.add("styles");
 site.use(date());
 site.use(sass());
 site.use(icons());
+site.use(inline());
 site.use(googleFonts({
     cssFile: "styles/fonts.css",
     fonts: {
@@ -22,7 +29,8 @@ site.use(googleFonts({
         "Noto Sans Mono": "https://fonts.google.com/share?selection.family=Noto+Sans+Mono:wght@100..900",
         "Noto Sans Symbols": "https://fonts.google.com/share?selection.family=Noto+Sans+Symbols:wght@100..900",
         "Noto Serif": "https://fonts.google.com/share?selection.family=Noto+Serif:ital,wght@0,100..900;1,100..900",
-        "Noto Serif Display": "https://fonts.google.com/share?selection.family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900"
+        "Noto Serif Display": "https://fonts.google.com/share?selection.family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900",
+        "Inter": "https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"
     },
 }));
 
