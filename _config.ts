@@ -5,9 +5,9 @@ import icons from "lume/plugins/icons.ts";
 import inline from "lume/plugins/inline.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 import {
-  flavors,
-  flavorEntries,
-  version,
+    flavors,
+    flavorEntries,
+    version,
 } from "https://deno.land/x/catppuccin/mod.ts";
 
 const site = lume({
@@ -30,7 +30,8 @@ site.use(googleFonts({
         "Noto Sans Symbols": "https://fonts.google.com/share?selection.family=Noto+Sans+Symbols:wght@100..900",
         "Noto Serif": "https://fonts.google.com/share?selection.family=Noto+Serif:ital,wght@0,100..900;1,100..900",
         "Noto Serif Display": "https://fonts.google.com/share?selection.family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900",
-        "Inter": "https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"
+        "Nunito": "https://fonts.google.com/share?selection.family=Nunito:ital,wght@0,200..1000;1,200..1000",
+        "Nunito Sans": "https://fonts.google.com/share?selection.family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000"
     },
 }));
 
